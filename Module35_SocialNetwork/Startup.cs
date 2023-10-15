@@ -10,7 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication2.Data;
+using Module35_SocialNetwork.Data;
+
 
 namespace Module35_SocialNetwork
 {
@@ -26,12 +27,20 @@ namespace Module35_SocialNetwork
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            string connection = Configuration.GetConnectionString("DefaultConnection");
+            services
+                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
+            services.AddIdentity<User, IdentityRole>(opts => {
+                 opts.Password.RequiredLength = 5;
+                 opts.Password.RequireNonAlphanumeric = false;
+                 opts.Password.RequireLowercase = false;
+                 opts.Password.RequireUppercase = false;
+                 opts.Password.RequireDigit = false;
+             })
+                    .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddControllersWithViews();
             services.AddRazorPages();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,20 +57,22 @@ namespace Module35_SocialNetwork
                 app.UseHsts();
             }
 
-            app.UseAuthentication(); //использование сервисов в конфигурации
-            app.UseAuthorization();
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+           
         }
     }
 }

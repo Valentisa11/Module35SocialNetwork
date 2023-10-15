@@ -22,5 +22,6 @@ namespace Module35_SocialNetwork
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+       
     }
 }
