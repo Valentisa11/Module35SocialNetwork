@@ -11,7 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Module35_SocialNetwork.Data;
-
+using Module35_SocialNetwork.Models.Users;
+using AutoMapper;
 
 namespace Module35_SocialNetwork
 {
@@ -28,6 +29,15 @@ namespace Module35_SocialNetwork
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
+
+            var mapperConfig = new MapperConfiguration((v) =>
+            {
+                v.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+
+            services.AddSingleton(mapper);
             services
                 .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
             services.AddIdentity<User, IdentityRole>(opts => {
@@ -40,6 +50,7 @@ namespace Module35_SocialNetwork
                     .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            
 
         }
 
