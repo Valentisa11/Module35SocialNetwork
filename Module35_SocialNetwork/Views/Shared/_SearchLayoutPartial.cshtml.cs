@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Module35_SocialNetwork.Views
+namespace Module35_SocialNetwork.Pages.Shared
 {
-    public class RegisterPart2Model : PageModel
+    public class _SearchLayoutPartialModel : PageModel
     {
         public void OnGet()
         {

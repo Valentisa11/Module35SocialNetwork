@@ -1,8 +1,13 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Module35_SocialNetwork.Models.Users;
 using Module35_SocialNetwork.ViewModels.Account;
-using System.Threading.Tasks;
+
 
 namespace Module35_SocialNetwork.Controllers.Account
 {
@@ -20,6 +25,7 @@ namespace Module35_SocialNetwork.Controllers.Account
             _signInManager = signInManager;
         }
 
+
         [Route("Register")]
         [HttpGet]
         public IActionResult Register()
@@ -33,6 +39,9 @@ namespace Module35_SocialNetwork.Controllers.Account
         {
             return View("RegisterPart2", model);
         }
+
+
+
         [Route("Register")]
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
@@ -59,5 +68,3 @@ namespace Module35_SocialNetwork.Controllers.Account
         }
     }
 }
-    
-
