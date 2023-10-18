@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using Module35_SocialNetwork.Data;
 using Module35_SocialNetwork.Models.Users;
 using AutoMapper;
+using Module35_SocialNetwork.Data.Repository;
+using Module35_SocialNetwork.Data.Extentions;
 
 namespace Module35_SocialNetwork
 {
@@ -39,13 +41,16 @@ namespace Module35_SocialNetwork
 
             services.AddSingleton(mapper);
             services
-                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
+                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection))
+                .AddUnitOfWork()
+                .AddCustomRepository<Friend, FriendsRepository>();
             services.AddIdentity<User, IdentityRole>(opts => {
                  opts.Password.RequiredLength = 5;
                  opts.Password.RequireNonAlphanumeric = false;
                  opts.Password.RequireLowercase = false;
                  opts.Password.RequireUppercase = false;
                  opts.Password.RequireDigit = false;
+
              })
                     .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();

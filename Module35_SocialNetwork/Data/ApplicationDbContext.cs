@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Module35_SocialNetwork.Configs;
 using Module35_SocialNetwork.Models.Users;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,11 @@ namespace Module35_SocialNetwork.Data
             Database.EnsureCreated();
         }
 
-        public static implicit operator System.Data.Entity.DbContext(ApplicationDbContext v)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            throw new NotImplementedException();
+            base.OnModelCreating(builder);
+
+            builder.ApplyConfiguration<Friend>(new FriendConfiguration());
         }
     }
 }
