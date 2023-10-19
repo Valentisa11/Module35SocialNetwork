@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Module35_SocialNetwork.Configs;
 using Module35_SocialNetwork.Models.Users;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,15 @@ namespace Module35_SocialNetwork.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            Database.Migrate();
         }
 
-        public static implicit operator System.Data.Entity.DbContext(ApplicationDbContext v)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            throw new NotImplementedException();
+            base.OnModelCreating(builder);
+
+            builder.ApplyConfiguration(new FriendConfiguration());
+            builder.ApplyConfiguration(new MessageConfuiguration());
         }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Module35_SocialNetwork.Models;
+using Module35_SocialNetwork.Models.Users;
 using Module35_SocialNetwork.ViewModels.Account;
 using System.Diagnostics;
 
@@ -10,17 +12,26 @@ namespace Module35_SocialNetwork.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly SignInManager<User> _signInManager;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, SignInManager<User> signInManager)
         {
             _logger = logger;
+            _signInManager = signInManager;
         }
 
         [Route("")]
         [Route("[controller]/[action]")]
         public IActionResult Index()
         {
-            return View(new MainViewModel());
+            if (_signInManager.IsSignedIn(User))
+            {
+                return RedirectToAction("MyPage", "AccountManager");
+            }
+            else
+            {
+                return View(new MainViewModel());
+            }
         }
 
         [Route("[action]")]

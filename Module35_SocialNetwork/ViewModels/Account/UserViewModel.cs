@@ -1,5 +1,9 @@
 ﻿using System.Collections.Generic;
 using Module35_SocialNetwork.Models.Users;
+using Microsoft.AspNetCore.Identity;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Module35_SocialNetwork.ViewModels.Account
 {
