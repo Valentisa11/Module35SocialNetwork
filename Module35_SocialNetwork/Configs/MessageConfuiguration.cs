@@ -8,7 +8,7 @@ namespace Module35_SocialNetwork.Configs
     {
         public void Configure(EntityTypeBuilder<Message> builder)
         {
-            builder.ToTable("Mesages").HasKey(p => p.Id);
+            builder.ToTable("Messages").HasKey(p => p.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
         }
     }

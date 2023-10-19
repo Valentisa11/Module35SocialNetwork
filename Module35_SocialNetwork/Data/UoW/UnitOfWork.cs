@@ -13,7 +13,7 @@ namespace Module35_SocialNetwork.Data.UoW
 
         public UnitOfWork(ApplicationDbContext app)
         {
-            this._appContext = app;
+            _appContext = app;
         }
 
         public void Dispose()

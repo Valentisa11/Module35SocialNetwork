@@ -15,6 +15,7 @@ using Module35_SocialNetwork.Models.Users;
 using AutoMapper;
 using Module35_SocialNetwork.Data.Repository;
 using Module35_SocialNetwork.Data.Extentions;
+using Microsoft.AspNetCore.Http;
 
 namespace Module35_SocialNetwork
 {
@@ -40,20 +41,24 @@ namespace Module35_SocialNetwork
             IMapper mapper = mapperConfig.CreateMapper();
 
             services.AddSingleton(mapper);
+
             services
                 .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection))
                 .AddUnitOfWork()
-                .AddCustomRepository<Friend, FriendsRepository>();
-            services.AddIdentity<User, IdentityRole>(opts => {
-                 opts.Password.RequiredLength = 5;
-                 opts.Password.RequireNonAlphanumeric = false;
-                 opts.Password.RequireLowercase = false;
-                 opts.Password.RequireUppercase = false;
-                 opts.Password.RequireDigit = false;
+                    .AddCustomRepository<Message, MessageRepository>()
+                    .AddCustomRepository<Friend, FriendsRepository>()
+                .AddIdentity<User, IdentityRole>(opts => {
+                    opts.Password.RequiredLength = 5;
+                    opts.Password.RequireNonAlphanumeric = false;
+                    opts.Password.RequireLowercase = false;
+                    opts.Password.RequireUppercase = false;
+                    opts.Password.RequireDigit = false;
 
-             })
+                })
                     .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddControllersWithViews();
+                
             services.AddRazorPages();
             
 
@@ -68,13 +73,20 @@ namespace Module35_SocialNetwork
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            var cachePeriod = "0";
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                OnPrepareResponse = ctx =>
+                {
+                    ctx.Context.Response.Headers.Append("Cache-Control", $"public, max-age={cachePeriod}");
+                }
+            });
 
             app.UseRouting();
 
