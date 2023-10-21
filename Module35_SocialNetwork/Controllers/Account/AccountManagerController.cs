@@ -2,17 +2,17 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Module35_SocialNetwork.Data;
-using Module35_SocialNetwork.Data.Repository;
-using Module35_SocialNetwork.Data.UoW;
-using Module35_SocialNetwork.Extentions;
-using Module35_SocialNetwork.Models.Users;
-using Module35_SocialNetwork.ViewModels.Account;
+using Module35SocialNetwork.Data;
+using Module35SocialNetwork.Data.Repository;
+using Module35SocialNetwork.Data.UoW;
+using Module35SocialNetwork.Extentions;
+using Module35SocialNetwork.Models.Users;
+using Module35SocialNetwork.ViewModels.Account;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Module35_SocialNetwork.Controllers.Account
+namespace Module35SocialNetwork.Controllers.Account
 {
     public class AccountManagerController : Controller
     {

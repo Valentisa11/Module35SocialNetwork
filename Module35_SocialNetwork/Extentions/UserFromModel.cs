@@ -1,7 +1,7 @@
-﻿using Module35_SocialNetwork.Models.Users;
-using Module35_SocialNetwork.ViewModels.Account;
+﻿using Module35SocialNetwork.Models.Users;
+using Module35SocialNetwork.ViewModels.Account;
 
-namespace Module35_SocialNetwork.Extentions
+namespace Module35SocialNetwork.Extentions
 {
     public static class UserFromModel
     {

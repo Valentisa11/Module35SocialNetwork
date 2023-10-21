@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Module35_SocialNetwork
+namespace Module35SocialNetwork
 {
     public class Program
     {

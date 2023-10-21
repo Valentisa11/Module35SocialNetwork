@@ -10,14 +10,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Module35_SocialNetwork.Data;
-using Module35_SocialNetwork.Models.Users;
+using Module35SocialNetwork.Data;
+using Module35SocialNetwork.Models.Users;
 using AutoMapper;
-using Module35_SocialNetwork.Data.Repository;
-using Module35_SocialNetwork.Data.Extentions;
+using Module35SocialNetwork.Data.Repository;
+using Module35SocialNetwork.Data.Extentions;
 using Microsoft.AspNetCore.Http;
 
-namespace Module35_SocialNetwork
+namespace Module35SocialNetwork
 {
     public class Startup
     {

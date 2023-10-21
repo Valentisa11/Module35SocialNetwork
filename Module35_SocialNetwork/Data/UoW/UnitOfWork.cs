@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Collections.Generic;
 using System;
-using Module35_SocialNetwork.Data.Repository;
+using Module35SocialNetwork.Data.Repository;
 
-namespace Module35_SocialNetwork.Data.UoW
+namespace Module35SocialNetwork.Data.UoW
 {
     public class UnitOfWork : IUnitOfWork
     {

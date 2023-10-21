@@ -1,4 +1,4 @@
-﻿namespace Module35_SocialNetwork.Models.Users
+﻿namespace Module35SocialNetwork.Models.Users
 {
     public class Message
     {

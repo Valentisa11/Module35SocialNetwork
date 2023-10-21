@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using Module35_SocialNetwork.Models.Users;
+using Module35SocialNetwork.Models.Users;
 
-namespace Module35_SocialNetwork.Data.Repository
+namespace Module35SocialNetwork.Data.Repository
 {
     public class MessageRepository : Repository<Message>
     {

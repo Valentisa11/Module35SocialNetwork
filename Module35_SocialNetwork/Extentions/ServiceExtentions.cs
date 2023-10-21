@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Module35_SocialNetwork.Data.Repository;
-using Module35_SocialNetwork.Data.UoW;
+using Module35SocialNetwork.Data.Repository;
+using Module35SocialNetwork.Data.UoW;
 
-namespace Module35_SocialNetwork.Data.Extentions
+namespace Module35SocialNetwork.Data.Extentions
 {
     public static class ServiceExtentions
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System;
 
-namespace Module35_SocialNetwork.ViewModels.Account
+namespace Module35SocialNetwork.ViewModels.Account
 {
     public class UserEditViewModel
     {
