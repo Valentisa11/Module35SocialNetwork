@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Module35_SocialNetwork.Models.Users;
-using Module35_SocialNetwork.ViewModels.Account;
+using Module35SocialNetwork.Models.Users;
+using Module35SocialNetwork.ViewModels.Account;
 
 
-namespace Module35_SocialNetwork.Controllers.Account
+namespace Module35SocialNetwork.Controllers.Account
 {
     public class RegisterController : Controller
     {

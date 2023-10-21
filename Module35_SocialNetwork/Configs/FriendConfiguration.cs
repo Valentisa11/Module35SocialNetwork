@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using Module35_SocialNetwork.Models.Users;
+using Module35SocialNetwork.Models.Users;
 
-namespace Module35_SocialNetwork.Configs
+namespace Module35SocialNetwork.Configs
 {
     public class FriendConfiguration : IEntityTypeConfiguration<Friend>
     {

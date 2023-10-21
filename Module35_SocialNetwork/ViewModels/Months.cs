@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Module35_SocialNetwork.ViewModels
+namespace Module35SocialNetwork.ViewModels
 {
     public enum Months
     {

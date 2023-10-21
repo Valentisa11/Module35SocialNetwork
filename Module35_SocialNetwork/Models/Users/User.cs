@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace Module35_SocialNetwork.Models.Users
+namespace Module35SocialNetwork.Models.Users
 {
     public class User : IdentityUser
     {

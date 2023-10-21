@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Module35_SocialNetwork.Configs;
-using Module35_SocialNetwork.Models.Users;
+using Module35SocialNetwork.Configs;
+using Module35SocialNetwork.Models.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Module35_SocialNetwork.Data
+namespace Module35SocialNetwork.Data
 {
     public class ApplicationDbContext : IdentityDbContext<User>
     {

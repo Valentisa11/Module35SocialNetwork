@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace Module35_SocialNetwork.Data.Repository
+namespace Module35SocialNetwork.Data.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {

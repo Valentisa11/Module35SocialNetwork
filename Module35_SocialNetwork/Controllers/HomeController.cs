@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Module35_SocialNetwork.Models;
-using Module35_SocialNetwork.Models.Users;
-using Module35_SocialNetwork.ViewModels.Account;
+using Module35SocialNetwork.Models;
+using Module35SocialNetwork.Models.Users;
+using Module35SocialNetwork.ViewModels.Account;
 using System.Diagnostics;
 
-namespace Module35_SocialNetwork.Controllers
+namespace Module35SocialNetwork.Controllers
 {
     public class HomeController : Controller
     {

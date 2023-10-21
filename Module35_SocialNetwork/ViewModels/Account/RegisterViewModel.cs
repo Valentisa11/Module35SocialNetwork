@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Xml.Linq;
 
-namespace Module35_SocialNetwork.ViewModels.Account
+namespace Module35SocialNetwork.ViewModels.Account
 {
     public class RegisterViewModel
     {

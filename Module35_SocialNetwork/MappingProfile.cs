@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Module35_SocialNetwork.Models.Users;
-using Module35_SocialNetwork.ViewModels.Account;
+using Module35SocialNetwork.Models.Users;
+using Module35SocialNetwork.ViewModels.Account;
 using System;
 
-namespace Module35_SocialNetwork
+namespace Module35SocialNetwork
 {
     public class MappingProfile : Profile
     {

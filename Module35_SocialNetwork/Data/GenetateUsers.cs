@@ -1,8 +1,8 @@
-﻿using Module35_SocialNetwork.Models.Users;
+﻿using Module35SocialNetwork.Models.Users;
 using System.Collections.Generic;
 using System;
 
-namespace Module35_SocialNetwork.Data
+namespace Module35SocialNetwork.Data
 {
     public class GenetateUsers
     {

@@ -1,4 +1,4 @@
-﻿namespace Module35_SocialNetwork.Models
+﻿namespace Module35SocialNetwork.Models
 {
     public class ErrorViewModel
     {
