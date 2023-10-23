@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System;
 using Module35SocialNetwork.Data.Repository;
+using Module35SocialNetwork.Models;
 
 namespace Module35SocialNetwork.Data.UoW
 {
     public class UnitOfWork : IUnitOfWork
+
     {
+
         private ApplicationDbContext _appContext;
 
         private Dictionary<Type, object> _repositories;
