@@ -1,15 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Collections.Generic;
 using System;
-using Module35SocialNetwork.Data.Repository;
-using Module35SocialNetwork.Models;
+using Module35SocialNetwork.DB.Data.Repository;
 
-namespace Module35SocialNetwork.Data.UoW
+namespace Module35SocialNetwork.DB.Data.UoW
 {
     public class UnitOfWork : IUnitOfWork
-
     {
-
         private ApplicationDbContext _appContext;
 
         private Dictionary<Type, object> _repositories;

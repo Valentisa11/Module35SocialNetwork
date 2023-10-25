@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Module35SocialNetwork.Models.Users;
+using Microsoft.EntityFrameworkCore;
+using Module35SocialNetwork.DB.Models.Users;
 
-namespace Module35SocialNetwork.Data.Repository
+namespace Module35SocialNetwork.DB.Data.Repository
 {
     public class MessageRepository : Repository<Message>
     {

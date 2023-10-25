@@ -6,11 +6,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
-using Module35SocialNetwork.Models.Users;
+using Module35SocialNetwork.DB.Models.Users;
 using AutoMapper;
-using Module35SocialNetwork.Data.Repository;
 using Module35SocialNetwork.Data.Extentions;
 using Microsoft.AspNetCore.Http;
+using Module35SocialNetwork.DB;
+using Module35SocialNetwork.DB.Data.Repository;
 
 namespace Module35SocialNetwork
 {

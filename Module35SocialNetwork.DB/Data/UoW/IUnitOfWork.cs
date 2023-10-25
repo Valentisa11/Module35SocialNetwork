@@ -1,8 +1,7 @@
-﻿using Module35SocialNetwork.Data.Repository;
+﻿using Module35SocialNetwork.DB.Data.Repository;
 using System;
-using Module35SocialNetwork.Models;
 
-namespace Module35SocialNetwork.Data.UoW
+namespace Module35SocialNetwork.DB.Data.UoW
 {
     public interface IUnitOfWork : IDisposable
     {

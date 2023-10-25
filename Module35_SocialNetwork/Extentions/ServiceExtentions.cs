@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Module35SocialNetwork.Data.Repository;
-using Module35SocialNetwork.Data.UoW;
+using Module35SocialNetwork.DB.Data.Repository;
+using Module35SocialNetwork.DB.Data.UoW;
 
 namespace Module35SocialNetwork.Data.Extentions
 {

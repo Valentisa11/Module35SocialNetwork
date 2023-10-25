@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Module35SocialNetwork.Models;
-using Module35SocialNetwork.Models.Users;
+using Module35SocialNetwork.DB.Models;
+using Module35SocialNetwork.DB.Models.Users;
 using Module35SocialNetwork.ViewModels.Account;
 using System.Diagnostics;
 

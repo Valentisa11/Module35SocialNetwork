@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Module35SocialNetwork.Data;
-using Module35SocialNetwork.Data.Repository;
-using Module35SocialNetwork.Data.UoW;
+using Module35SocialNetwork.DB.Data;
+using Module35SocialNetwork.DB.Data.Repository;
+using Module35SocialNetwork.DB.Data.UoW;
+using Module35SocialNetwork.DB.Models.Users;
 using Module35SocialNetwork.Extentions;
-using Module35SocialNetwork.Models.Users;
 using Module35SocialNetwork.ViewModels.Account;
 using System.Collections.Generic;
 using System.Linq;

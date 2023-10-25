@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Xml.Linq;
 
 namespace Module35SocialNetwork.ViewModels.Account
 {

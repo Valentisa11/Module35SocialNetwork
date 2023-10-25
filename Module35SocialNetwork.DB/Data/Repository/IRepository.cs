@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Module35SocialNetwork.Data.Repository
+namespace Module35SocialNetwork.DB.Data.Repository
 {
     public interface IRepository<T> where T : class
     {

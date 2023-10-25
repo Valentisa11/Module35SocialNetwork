@@ -1,8 +1,4 @@
-﻿using Module35SocialNetwork.Models.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Module35SocialNetwork.DB.Models.Users;
 
 namespace Module35SocialNetwork.ViewModels.Account
 {

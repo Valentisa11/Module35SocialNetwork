@@ -1,9 +1,9 @@
-﻿using Module35SocialNetwork.Models.Users;
+﻿using Microsoft.EntityFrameworkCore;
+using Module35SocialNetwork.DB.Models.Users;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 
-namespace Module35SocialNetwork.Data.Repository
+namespace Module35SocialNetwork.DB.Data.Repository
 {
     public class FriendsRepository : Repository<Friend>
     {

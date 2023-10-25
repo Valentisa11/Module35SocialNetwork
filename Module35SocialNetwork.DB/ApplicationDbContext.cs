@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Module35SocialNetwork.Configs;
+using Module35SocialNetwork.DB.Models.Users;
 
-namespace Module35SocialNetwork.Models
+namespace Module35SocialNetwork.DB
 {
     public class ApplicationDbContext : IdentityDbContext<User>
     {
@@ -17,5 +20,7 @@ namespace Module35SocialNetwork.Models
             builder.ApplyConfiguration(new FriendConfiguration());
             builder.ApplyConfiguration(new MessageConfuiguration());
         }
+
     }
+
 }
